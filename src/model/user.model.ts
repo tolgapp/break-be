@@ -51,6 +51,8 @@ const UserSchema = new Schema<User>(
   { timestamps: true }
 );
 
+UserSchema.index({ email: 1 }, { unique: true });
+
 const User = model<User>("User", UserSchema);
 
 export default User;

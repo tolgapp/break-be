@@ -18,7 +18,7 @@ router.post("/signup", async (req, res) => {
   }
 
   try {
-    const saltRounds = 10;
+    const saltRounds = 8;
     const hashedPassword = await bcrypt.hash(password, saltRounds);
 
     const newUser = new User({
