@@ -10,7 +10,7 @@ interface Coffee extends Document {
   prices: number[];
   tags: string[];
 }
-
+ 
 const CoffeesSchema: Schema = new Schema({
   id: { type: Number, required: true, unique: true },
   name: { type: String, required: true },
