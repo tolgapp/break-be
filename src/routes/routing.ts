@@ -1,7 +1,6 @@
 import { Router } from "express";
 import bcrypt from "bcrypt";
 import User from "../model/user.model";
-import { timeStamp } from "console";
 
 const router = Router();
 
