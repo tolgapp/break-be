@@ -32,5 +32,5 @@ mongoose
 app.use("/api", router)
 
 app.listen(PORT, () => {
-  console.log(`Happy Coding! 🔥 Server is running on Port ${PORT}`);
+  console.log(`🔥 Server is running on Port ${PORT}`);
 });
