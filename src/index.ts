@@ -11,6 +11,11 @@ const app = express();
 const PORT = process.env.PORT || 5002;
 const allowedOrigins = process.env.FRONTEND_LINK;
 
+mongoose
+  .connect(process.env.MONGO_URI as string)
+  .then(() => console.log("Connected to MongoDB"))
+  .catch((error) => console.log("MongoDB connection error", error));
+
 app.use(express.json());
 app.use(cookieParser());
 app.use(
@@ -22,12 +27,6 @@ app.use(
     optionsSuccessStatus: 204,
   })
 );
-
-mongoose
-  .connect(process.env.MONGO_URI as string)
-  .then(() => console.log("Connected to MongoDB"))
-  .catch((error) => console.log("MongoDB connection error", error));
-
 
 app.use("/api", router)
 
