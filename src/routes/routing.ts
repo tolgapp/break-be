@@ -15,8 +15,8 @@ router.post("/login", login);
 
 // User Controller
 router.get("/users/:id", getUserById);
-router.post("/users/:id", updateUser);
 router.get("/users/:id/receipts", userOrderHistory);
+router.post("/users/:id", updateUser);
 
 // Checkout Controller
 router.post("/checkout", handleCheckout);
